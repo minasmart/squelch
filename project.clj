@@ -3,7 +3,6 @@
   :url "https://github.com/minasmart/squelch"
   :license {:name "MIT"
             :url "http://opensource.org/licenses/MIT"}
-
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2371"]]
 
@@ -18,4 +17,15 @@
                 :output-to "squelch.js"
                 :output-dir "out"
                 :optimizations :none
-                :source-map true}}]})
+                :source-map true}}]}
+
+  :scm {:name "git"
+        :url "https://github.com/minaminamina/squelch"}
+  :signing {:gpg-key "minaminamina@keybase.io"}
+  :deploy-repositories [["clojars" {:creds :gpg}]]
+
+  :pom-addition [:developers [:developer
+                              [:name "Mina Smart"]
+                              [:url "http://github.com/minasmart"]
+                              [:email "m.d.smart@gmail.com"]
+                              [:timezone "-5"]]])
