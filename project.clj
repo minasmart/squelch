@@ -21,7 +21,8 @@
 
   :scm {:name "git"
         :url "https://github.com/minaminamina/squelch"}
-  :signing {:gpg-key "minaminamina@keybase.io"}
+
+  :signing {:gpg-key "F6DC191D7745EF83"}
   :deploy-repositories [["clojars" {:creds :gpg}]]
 
   :pom-addition [:developers [:developer
