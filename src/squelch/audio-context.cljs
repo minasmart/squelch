@@ -1,8 +1,8 @@
 (ns squelch.audio-context)
 
-; -----------
-; Properties:
-; -----------
+; -------------
+; Constructors:
+; -------------
 
 (defn new-audio-context
   "Create a new audio context"
@@ -10,27 +10,31 @@
   (let [ctor (or (.-AudioContext js/window) (.-webkitAudioContext js/window))]
     (ctor.)))
 
-(defn current-time
+; -----------
+; Properties:
+; -----------
+
+(defn get-current-time
   "Read only.
   Returns a double representing an ever-increasing hardware time in seconds
   used for scheduling. It starts at 0 and cannot be stopped, paused or reset."
   [ctx]
   (.-currentTime ctx))
 
-(defn destination
+(defn get-destination
   "Read only.
   Returns an AudioDestinationNode representing the final destination of all
   audio in the context. It can be thought of as the audio-rendering device."
   [ctx]
   (.-currentTime ctx))
 
-(defn listener
+(defn get-listener
   "Read only.
   Returns the AudioListener object, used for 3D spatialization."
   [ctx]
   (.-listener ctx))
 
-(defn sample-rate
+(defn get-sample-rate
   "Read only.
   Returns a float representing the sample rate (in samples per second) used by
   all nodes in this context. The sample-rate of an AudioContext cannot be
@@ -38,7 +42,7 @@
   [ctx]
   (.-sampleRate ctx))
 
-(defn moz-audio-channel-type
+(defn get-moz-audio-channel-type
   "Read only.
   Used to return the audio channel that the sound playing in an AudioContext
   will play in, on a Firefox OS device."
