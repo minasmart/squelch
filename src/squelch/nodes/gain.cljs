@@ -1,11 +1,11 @@
-(ns squelch.nodes.delay)
+(ns squelch.nodes.gain)
 
 ; -----------
 ; Properties:
 ; -----------
 
-(defn get-delay-time
+(defn get-gain
   "Read only.
-  Is an a-rate AudioParam representing the amount of delay to apply."
-  [delay-node]
-  (.-delayTime delay-node))
+  Is an a-rate AudioParam representing the amount of gain to apply."
+  [gain-node]
+  (.-gain gain-node))
