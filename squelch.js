@@ -6,3 +6,5 @@ goog.addDependency("../squelch/audio_param.js", ['squelch.audio_param'], ['cljs.
 goog.addDependency("../squelch/audio_buffer.js", ['squelch.audio_buffer'], ['cljs.core']);
 goog.addDependency("../squelch/nodes/audio_buffer_source.js", ['squelch.nodes.audio_buffer_source'], ['cljs.core']);
 goog.addDependency("../squelch/core.js", ['squelch.core'], ['cljs.core']);
+goog.addDependency("../squelch/nodes/analyser.js", ['squelch.nodes.analyser'], ['cljs.core']);
+goog.addDependency("../squelch/nodes/biquad_filter.js", ['squelch.nodes.biquad_filter'], ['cljs.core']);

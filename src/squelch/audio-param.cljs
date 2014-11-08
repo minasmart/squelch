@@ -46,7 +46,7 @@
   the new value given in the value parameter, and reaches the new value at the
   time given in the endTime parameter."
   [param value end-time]
-  (.linearRampToValueAtTime param value start-time))
+  (.linearRampToValueAtTime param value end-time))
 
 (defn exponential-ramp-to-value-at-time
   "Schedules a gradual exponential change in the value of the AudioParam. The
