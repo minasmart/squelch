@@ -8,8 +8,8 @@
   "Read only.
   Returns an integer representing both the input and output buffer size. It's
   value can be a power of 2 value in the range 256–16384."
-  [buffer-source]
-  (.-bufferSize buffer-source))
+  [processor]
+  (.-bufferSize processor))
 
 ; ---------------
 ; Event handlers:
@@ -19,9 +19,9 @@
   "Represents the EventHandler to be called. Instead of receiving the raw audio
   event the function receives input and output audio buffers. The signature of
   the handler should be [input-buffer output-buffer]."
-  [buffer-source audio-process-fn]
+  [processor audio-process-fn]
   (let [process-proxy (fn [audio-event]
                         (let [input-buffer (.-inputBuffer audio-event)
                               output-buffer (.-outputBuffer audio-event)]
                           (audio-process-fn input-buffer output-buffer)))]
-    (set! (.-onaudioprocess buffer-source) process-proxy)))
+    (set! (.-onaudioprocess processor) process-proxy)))
