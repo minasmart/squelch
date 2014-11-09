@@ -1,4 +1,4 @@
-(ns squelch.audio-context)
+(ns squelch.audio-node)
 
 ; -----------
 ; Properties:
