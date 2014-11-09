@@ -1,4 +1,4 @@
-(defproject squelch "0.1.0-SNAPSHOT"
+(defproject squelch "0.1.0"
   :description "Squelch: A clojurescript web audio wrapper"
   :url "https://github.com/minasmart/squelch"
   :license {:name "MIT"
@@ -15,6 +15,7 @@
   :cljsbuild {
     :builds [{:id "squelch"
               :source-paths ["src"]
+              :jar true
               :compiler {
                 :output-to "squelch.js"
                 :output-dir "out"
