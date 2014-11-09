@@ -6,7 +6,7 @@
 
 (defn get-context
   "Read only.
-  Returns the associated AudioContext, that is the object representing the \
+  Returns the associated AudioContext, that is the object representing the
   processing graph the node is participating in."
   [node]
   (.-context node))
