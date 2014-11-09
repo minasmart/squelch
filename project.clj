@@ -1,4 +1,4 @@
-(defproject squelch "0.1.1"
+(defproject squelch "0.1.2-SNAPSHOT"
   :description "Squelch: A clojurescript web audio wrapper"
   :url "https://github.com/minasmart/squelch"
   :license {:name "MIT"
