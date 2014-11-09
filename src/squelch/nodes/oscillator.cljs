@@ -16,7 +16,7 @@
   (though the AudioParam returned is read-only, the value it represents is
   not.)"
   [oscillator frequency]
-  (set! (.- oscillator) frequency))
+  (set! (.-frequency oscillator) frequency))
 
 (defn get-detune
   "An a-rate AudioParam representing detuning of oscillation in cents (though
