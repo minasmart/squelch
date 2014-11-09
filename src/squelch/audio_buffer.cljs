@@ -55,10 +55,7 @@
   "Copies the samples to the specified channel of the AudioBuffer, from the
   source array."
   ([buffer source channel-number]
-   (.copyFromChannelbbuffer buffer source channel-number))
+   (.copyFromChannel buffer source channel-number))
 
   ([buffer source channel-number start-in-channel]
-   (.copyFromChannelbbuffer buffer
-                            source
-                            channel-number
-                            start-in-channel)))
+   (.copyFromChannel buffer source channel-number start-in-channel)))
