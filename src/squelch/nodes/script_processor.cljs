@@ -15,12 +15,13 @@
 ; Event handlers:
 ; ---------------
 
-(defn get-on-audio-process
-  "Represents the EventHandler to be called."
-  [buffer-source]
-  (.-onaudioprocess buffer-source))
-
 (defn set-on-audio-process
-  "Represents the EventHandler to be called."
+  "Represents the EventHandler to be called. Instead of receiving the raw audio
+  event the function receives input and output audio buffers. The signature of
+  the handler should be [input-buffer output-buffer]."
   [buffer-source audio-process-fn]
-  (set! (.-onaudioprocess buffer-source) audio-process-fn))
+  (let [process-proxy (fn [audio-event]
+                        (let [input-buffer (.-inputBuffer audio-event)
+                              output-buffer (.-outputBuffer audio-event)]
+                          (audio-process-fn input-buffer output-buffer)))]
+    (set! (.-onaudioprocess buffer-source) process-proxy)))
