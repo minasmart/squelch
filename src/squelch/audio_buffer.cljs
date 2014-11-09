@@ -46,13 +46,10 @@
   "Copies the samples from the specified channel of the AudioBuffer to the
   destination array."
   ([buffer destination channel-number]
-   (.copyFromChannelbbuffer buffer destination channel-number))
+   (.copyFromChannel buffer destination channel-number))
 
   ([buffer destination channel-number start-in-channel]
-   (.copyFromChannelbbuffer buffer
-                            destination
-                            channel-number
-                            start-in-channel)))
+   (.copyFromChannel buffer destination channel-number start-in-channel)))
 
 (defn copy-to-channel
   "Copies the samples to the specified channel of the AudioBuffer, from the
