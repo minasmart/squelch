@@ -26,7 +26,7 @@
   Returns an AudioDestinationNode representing the final destination of all
   audio in the context. It can be thought of as the audio-rendering device."
   [ctx]
-  (.-currentTime ctx))
+  (.-destination ctx))
 
 (defn get-listener
   "Read only.
