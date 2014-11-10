@@ -71,8 +71,14 @@
 
 (defn connect
   "Allows us to connect one output of this node to one input of another node."
-  [src dest]
-  (.connect src dest))
+  ([src dest]
+   (.connect src dest))
+
+  ([src dest src-channel]
+   (.connect src dest src-channel))
+
+  ([src dest src-channel dest-channel]
+   (.connect src dest src-channel dest-channel)))
 
 (defn disconnect
   "Allows us to disconnect the current node from another one it is already
