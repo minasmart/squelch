@@ -1,4 +1,4 @@
-(defproject squelch "0.1.2-SNAPSHOT"
+(defproject squelch "0.1.3-SNAPSHOT"
   :description "Squelch: A clojurescript web audio wrapper"
   :url "https://github.com/minasmart/squelch"
   :license {:name "MIT"
@@ -8,7 +8,7 @@
                  [com.cemerick/piggieback "0.1.3"]]
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-  :plugins [[lein-cljsbuild "1.0.5-SNAPSHOT"]
+  :plugins [[lein-cljsbuild "1.0.6-SNAPSHOT"]
             [codox "0.8.10"]]
 
   :source-paths ["--cljs-only--"]
