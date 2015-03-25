@@ -8,7 +8,7 @@
                  [com.cemerick/piggieback "0.1.3"]]
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]
+  :plugins [[lein-cljsbuild "1.0.5-SNAPSHOT"]
             [codox "0.8.10"]]
 
   :source-paths ["--cljs-only--"]
