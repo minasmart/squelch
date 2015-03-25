@@ -74,10 +74,9 @@
 
 (defn get-float-frequency-data
   "Copies the current frequency data into a Float32Array array passed into it."
-  [analyser]
+  [analyser dest]
 
-  (let [size (get-frequency-bin-count analyser)
-        dest (js/Float32Array. size)]
+  (let [size (get-frequency-bin-count analyser)]
 
     (.getFloatFrequencyData analyser dest)
     dest))
@@ -85,10 +84,9 @@
 (defn get-byte-frequency-data
   "Copies the current frequency data into a Uint8Array (unsigned byte array)
   passed into it."
-  [analyser]
+  [analyser dest]
 
-  (let [size (get-frequency-bin-count analyser)
-        dest (js/Uint8Array. size)]
+  (let [size (get-frequency-bin-count analyser)]
 
     (.getByteFrequencyData analyser dest)
     dest))
@@ -96,10 +94,9 @@
 (defn get-float-time-domain-data
   "Copies the current waveform, or time-domain, data into a Float32Array array
   passed into it."
-  [analyser]
+  [analyser dest]
 
-  (let [size (get-fft-size analyser)
-        dest (js/Float32Array. size)]
+  (let [size (get-fft-size analyser)]
 
     (.getFloatTimeDomainData analyser dest)
     dest))
@@ -109,8 +106,7 @@
   byte array) passed into it."
   [analyser dest]
 
-  (let [size (get-fft-size analyser)
-        dest (js/Uint8Array. size)]
+  (let [size (get-fft-size analyser)]
 
     (.getByteTimeDomainData analyser dest)
     dest))

@@ -52,13 +52,11 @@
   "From the current filter parameter settings this method calculates the
   frequency response for frequencies specified in the provided array of
   frequencies."
-  [biquad-filter frequency-array]
-  (let [size (.-length frequency-array)
-        mag-response (js/Float32Array. size)
-        phase-response (js/Float32Array. size)]
+  [biquad-filter frequency-array mag-response phase-response]
+  (let [size (.-length frequency-array)]
 
     (.getFrequencyResponse biquad-filter
                            frequency-array
                            mag-response
                            phase-response)
-    {:mag-response mag-response :phase-response phase-response}))
+    [mag-response phase-response]))
